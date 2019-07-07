@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using DatingApp.api.Data;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -11,7 +12,7 @@ namespace DatingApp.API.Controllers
 
     // using the two methods below api get and post and delete perphase.
 
-
+    [Authorize] // to authenticate our controller
     [Route("api/[controller]")]
     [ApiController]
     public class ValuesController : ControllerBase
@@ -37,6 +38,8 @@ namespace DatingApp.API.Controllers
         }
 
         // GET api/values/5
+        // in of this case we make it as allowanonmucs to get indvi values.
+        [AllowAnonymous]
         [HttpGet("{id}")]
         public async Task<IActionResult> GetValueAsync(int id)  // this retun only one vlaue
         {

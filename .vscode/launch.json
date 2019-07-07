@@ -5,7 +5,7 @@
    "version": "0.2.0",
    "configurations": [
        {
-           "name": ".NET Core Attach",
+           "name": ".NET Core Attach ",
            "type": "coreclr",
            "request": "attach",
            "processId": "${command:pickProcess}"
@@ -30,7 +30,7 @@
            "type": "coreclr",
            "request": "launch",
            "preLaunchTask": "build",
-           "program": "${workspaceFolder}/bin/Debug/<target-framework>/<project-name.dll>",
+           "program": "${workspaceFolder}/DatingApp.API/Controllers/AuthController.cs",
            "args": [],
            "cwd": "${workspaceFolder}",
            "stopAtEntry": false,
@@ -58,7 +58,7 @@
             "request": "launch",
             "preLaunchTask": "build",
             // If you have changed target frameworks, make sure to update the program path.
-            "program": "${workspaceFolder}/DatingApp.API/bin/Debug/netcoreapp2.2/DatingApp.API.dll",
+            "program": "${workspaceFolder}/DatingApp.API/Controllers/AuthController.cs",
             "args": [],
             "cwd": "${workspaceFolder}/DatingApp.API",
             "stopAtEntry": false,
