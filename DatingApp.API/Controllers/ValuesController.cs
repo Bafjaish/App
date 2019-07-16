@@ -26,6 +26,7 @@ namespace DatingApp.API.Controllers
 
         }
         // GET api/values
+        [AllowAnonymous]
         [HttpGet]
 // we can use async code becuas the below function can block the code until the query is finiseh, 
 // but with async the code is excuting and more http request are done at the same time.
